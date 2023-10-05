@@ -13,16 +13,20 @@
     <div class="container">
         <div class="inputan">
             <form>
-                <p>Put your weight in here (KG)</p>
-                <input type="text" id="berat-badan" style="width: 300px; height:20px;"/>
+                <label for="weight">Put your weight in here (KG)</label><br/>
+                <input type="number" id="berat-badan" style="width: 300px; height:20px;"/><br/>
         
-                <p>Put your height in here (CM)</p>
-                <input type="text" id="tinggi-badan" style="width: 300px; height:20px;"/>
+                <label for="height">Put your height in here (CM)</label><br/>
+                <input type="number" id="tinggi-badan" style="width: 300px; height:20px;"/>
         
                 <br/><br/>
-                <button>Calculate BMI</button>
+                <button onclick="hitungBMI()">Calculate BMI</button>
             </form>
         </div>
+    </div>
+
+    <div id="output">
+
     </div>
 
     
