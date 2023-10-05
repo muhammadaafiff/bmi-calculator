@@ -7,30 +7,24 @@
     <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <h1>Check your BMI</h1>
-    <p>Enter your weight and height below to check your BMI results</p>
-
     <div class="container">
-        <div class="inputan">
+        <h1>Check your BMI</h1>
+        <p>Enter your weight and height below to check your BMI results</p>
+
             <form>
-                <label for="weight">Put your weight in here (KG)</label><br/>
-                <input type="number" id="berat-badan" style="width: 300px; height:20px;"/><br/>
+                <label class="berat" for="weight">Put your weight in here <span style="color: red; font-weight: bolder;">(KG)</span></label><br/>
+                <input class="berat" type="number" id="berat-badan" style="width: 60%; height:20px;"/><br/>
         
-                <label for="height">Put your height in here (CM)</label><br/>
-                <input type="number" id="tinggi-badan" style="width: 300px; height:20px;"/>
+                <label class="tinggi" for="height">Put your height in here <span style="color: red; font-weight: bolder;">(CM)</span></label><br/>
+                <input class="tinggi" type="number" id="tinggi-badan" style="width: 60%; height:20px;"/>
         
                 <br/><br/>
                 <button id="btn-hitung">Calculate BMI</button>
             </form>
-        </div>
-    </div>
-
-    <div id="output">
-
-    </div>
-
+            <div id="hasil">
     
-
+            </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

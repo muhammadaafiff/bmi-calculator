@@ -9,25 +9,25 @@ function hitungBMI() {
   let beratBadan = parseFloat(document.getElementById("berat-badan").value);
   let tinggiBadan = parseFloat(document.getElementById("tinggi-badan").value);
 
-  let hasilBMI = beratBadan / Math.pow(tinggiBadan / 100, 2);
-  console.log(hasilBMI);
-
+  let skorBMI = beratBadan / Math.pow(tinggiBadan / 100, 2);
+  
   let kategori;
 
-  if (hasilBMI >= 0 && hasilBMI < 18.5) {
+  if (skorBMI >= 0 && skorBMI < 18.5) {
     kategori = "underweight";
-  } else if (hasilBMI >= 18.5 && hasilBMI <= 24.9) {
-    kategori = "Normal weight";
-  } else if (hasilBMI >= 25 && hasilBMI <= 29.9) {
-    kategori = "Overweight";
-  } else if (hasilBMI >= 30) {
-    kategori = "Obesity";
+  } else if (skorBMI >= 18.5 && skorBMI <= 24.9) {
+    kategori = "normal weight";
+  } else if (skorBMI >= 25 && skorBMI <= 29.9) {
+    kategori = "overweight";
+  } else if (skorBMI >= 30) {
+    kategori = "obesity";
   } else {
-    kategori = "This score is invalid";
+    kategori = "invalid score";
   }
 
-  const outputBMI = document.getElementById("output");
-  outputBMI.innerHTML = `Your BMI is ${hasilBMI.toFixed(2)} (${kategori})`;
+  const hasilBMI = document.getElementById("hasil");
+  hasilBMI.innerHTML = `Weight : ${beratBadan} kg, Height : ${tinggiBadan} cm <br>
+  Your BMI is ${skorBMI.toFixed(2)} (${kategori})`;
 
   document.getElementById("berat-badan").value = "";
   document.getElementById("tinggi-badan").value = "";
